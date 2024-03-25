@@ -1,3 +1,6 @@
-./checkpoint/
-./out_data/
-./out_fig/
+checkpoint/
+out_data/
+out_fig/
+data/
+*.tar.gz
+*.gz
