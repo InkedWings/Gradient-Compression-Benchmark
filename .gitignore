@@ -2,5 +2,6 @@ checkpoint/
 out_data/
 out_fig/
 data/
+__pycache__
 *.tar.gz
 *.gz
