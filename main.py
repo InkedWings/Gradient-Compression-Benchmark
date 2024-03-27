@@ -39,7 +39,7 @@ parser.add_argument('--quantum_num', type=int, default=8,
 
 args = parser.parse_args()
 
-wdir = "/home/zye25/Gradient-Compression-Benchmark/"
+wdir = "/grand/sbi-fair/zongqing/Gradient-Compression-Benchmark/"
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 best_acc = 0  # best test accuracy
 start_epoch = 0  # start from epoch 0 or last checkpoint epoch
@@ -220,9 +220,17 @@ def record_csv(x_epoch, loss_data, acc_data):
     
     df.to_csv(wdir+"out_data/{model_name}.csv".format(model_name=args.model_name), mode = write_mode, index=False)
 
+
+# Record Data in txt file
+def record_txt(x_epoch, loss_data, acc_data, wdir):
     
+    file_path = wdir+"out_data/{model_name}.txt".format(model_name=args.model_name)
 
-
+    with open(file_path, "a", encoding='utf-8') as record_out:
+        record_out.write("epoch train_acc train_loss val_acc val_loss\n")
+        for i in x_epoch:
+            one_line = " ".join([str(i), str(acc_data['train'][i]), str(loss_data['train'][i]), str(acc_data['val'][i]), str(loss_data['val'][i]) ] ) + "\n"
+            record_out.write(one_line)
 
 
 if args.test:
@@ -237,5 +245,4 @@ else:
 
     fig_plot(x_epoch, loss_data, acc_data)
     record_csv(x_epoch, loss_data, acc_data)
-
-
+    record_txt(x_epoch, loss_data, acc_data, wdir)
