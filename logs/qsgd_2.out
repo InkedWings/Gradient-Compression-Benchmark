@@ -1,0 +1,823 @@
+Training Command: module load conda ; conda activate base ;  cd /home/zye25/Gradient-Compression-Benchmark/ ; python main.py --model_name qsgd_2 --compression qsgd --quantum_num 2   
+==> Preparing data..
+Files already downloaded and verified
+Files already downloaded and verified
+==> Building model..
+Using 4 GPUs!
+DataParallel!!!
+Using Compressor:  qsgd_2
+Using memory:  none_memory
+
+Epoch: 0
+epoch: 0 train loss: 2.069 train acc: 31.750
+epoch: 0 val loss: 1.601 val acc: 42.490
+Saving..
+
+Epoch: 1
+epoch: 1 train loss: 1.412 train acc: 48.890
+epoch: 1 val loss: 1.348 val acc: 51.240
+Saving..
+
+Epoch: 2
+epoch: 2 train loss: 1.145 train acc: 59.368
+epoch: 2 val loss: 1.070 val acc: 62.150
+Saving..
+
+Epoch: 3
+epoch: 3 train loss: 0.943 train acc: 66.784
+epoch: 3 val loss: 1.048 val acc: 64.530
+Saving..
+
+Epoch: 4
+epoch: 4 train loss: 0.795 train acc: 72.072
+epoch: 4 val loss: 0.741 val acc: 74.110
+Saving..
+
+Epoch: 5
+epoch: 5 train loss: 0.685 train acc: 76.336
+epoch: 5 val loss: 1.154 val acc: 64.270
+
+Epoch: 6
+epoch: 6 train loss: 0.629 train acc: 78.324
+epoch: 6 val loss: 0.771 val acc: 74.030
+
+Epoch: 7
+epoch: 7 train loss: 0.592 train acc: 79.690
+epoch: 7 val loss: 0.680 val acc: 76.550
+Saving..
+
+Epoch: 8
+epoch: 8 train loss: 0.569 train acc: 80.366
+epoch: 8 val loss: 0.690 val acc: 77.010
+Saving..
+
+Epoch: 9
+epoch: 9 train loss: 0.539 train acc: 81.578
+epoch: 9 val loss: 0.646 val acc: 78.690
+Saving..
+
+Epoch: 10
+epoch: 10 train loss: 0.531 train acc: 81.730
+epoch: 10 val loss: 0.601 val acc: 79.740
+Saving..
+
+Epoch: 11
+epoch: 11 train loss: 0.517 train acc: 82.240
+epoch: 11 val loss: 0.660 val acc: 78.880
+
+Epoch: 12
+epoch: 12 train loss: 0.500 train acc: 82.806
+epoch: 12 val loss: 0.587 val acc: 80.400
+Saving..
+
+Epoch: 13
+epoch: 13 train loss: 0.499 train acc: 82.780
+epoch: 13 val loss: 0.676 val acc: 77.190
+
+Epoch: 14
+epoch: 14 train loss: 0.487 train acc: 83.068
+epoch: 14 val loss: 0.731 val acc: 76.590
+
+Epoch: 15
+epoch: 15 train loss: 0.480 train acc: 83.572
+epoch: 15 val loss: 0.752 val acc: 75.840
+
+Epoch: 16
+epoch: 16 train loss: 0.474 train acc: 83.760
+epoch: 16 val loss: 0.906 val acc: 71.360
+
+Epoch: 17
+epoch: 17 train loss: 0.473 train acc: 83.822
+epoch: 17 val loss: 0.533 val acc: 82.080
+Saving..
+
+Epoch: 18
+epoch: 18 train loss: 0.468 train acc: 83.950
+epoch: 18 val loss: 0.554 val acc: 81.320
+
+Epoch: 19
+epoch: 19 train loss: 0.464 train acc: 84.132
+epoch: 19 val loss: 0.535 val acc: 81.890
+
+Epoch: 20
+epoch: 20 train loss: 0.462 train acc: 84.102
+epoch: 20 val loss: 0.672 val acc: 78.990
+
+Epoch: 21
+epoch: 21 train loss: 0.454 train acc: 84.528
+epoch: 21 val loss: 0.765 val acc: 75.740
+
+Epoch: 22
+epoch: 22 train loss: 0.453 train acc: 84.352
+epoch: 22 val loss: 0.530 val acc: 82.540
+Saving..
+
+Epoch: 23
+epoch: 23 train loss: 0.448 train acc: 84.682
+epoch: 23 val loss: 0.474 val acc: 83.940
+Saving..
+
+Epoch: 24
+epoch: 24 train loss: 0.442 train acc: 84.916
+epoch: 24 val loss: 0.508 val acc: 83.120
+
+Epoch: 25
+epoch: 25 train loss: 0.441 train acc: 85.090
+epoch: 25 val loss: 0.517 val acc: 82.640
+
+Epoch: 26
+epoch: 26 train loss: 0.440 train acc: 85.026
+epoch: 26 val loss: 0.618 val acc: 79.640
+
+Epoch: 27
+epoch: 27 train loss: 0.436 train acc: 84.992
+epoch: 27 val loss: 0.544 val acc: 81.310
+
+Epoch: 28
+epoch: 28 train loss: 0.435 train acc: 84.906
+epoch: 28 val loss: 0.677 val acc: 79.120
+
+Epoch: 29
+epoch: 29 train loss: 0.428 train acc: 85.484
+epoch: 29 val loss: 0.601 val acc: 79.610
+
+Epoch: 30
+epoch: 30 train loss: 0.433 train acc: 85.144
+epoch: 30 val loss: 0.604 val acc: 80.480
+
+Epoch: 31
+epoch: 31 train loss: 0.427 train acc: 85.486
+epoch: 31 val loss: 0.559 val acc: 82.110
+
+Epoch: 32
+epoch: 32 train loss: 0.425 train acc: 85.590
+epoch: 32 val loss: 0.611 val acc: 80.510
+
+Epoch: 33
+epoch: 33 train loss: 0.430 train acc: 85.282
+epoch: 33 val loss: 0.584 val acc: 80.740
+
+Epoch: 34
+epoch: 34 train loss: 0.425 train acc: 85.540
+epoch: 34 val loss: 0.516 val acc: 82.920
+
+Epoch: 35
+epoch: 35 train loss: 0.424 train acc: 85.612
+epoch: 35 val loss: 0.564 val acc: 81.060
+
+Epoch: 36
+epoch: 36 train loss: 0.417 train acc: 85.592
+epoch: 36 val loss: 0.535 val acc: 82.000
+
+Epoch: 37
+epoch: 37 train loss: 0.423 train acc: 85.664
+epoch: 37 val loss: 0.545 val acc: 82.380
+
+Epoch: 38
+epoch: 38 train loss: 0.414 train acc: 85.842
+epoch: 38 val loss: 0.647 val acc: 79.090
+
+Epoch: 39
+epoch: 39 train loss: 0.417 train acc: 85.920
+epoch: 39 val loss: 0.568 val acc: 81.520
+
+Epoch: 40
+epoch: 40 train loss: 0.416 train acc: 85.616
+epoch: 40 val loss: 0.540 val acc: 82.790
+
+Epoch: 41
+epoch: 41 train loss: 0.416 train acc: 86.016
+epoch: 41 val loss: 0.684 val acc: 78.660
+
+Epoch: 42
+epoch: 42 train loss: 0.415 train acc: 85.832
+epoch: 42 val loss: 0.533 val acc: 81.890
+
+Epoch: 43
+epoch: 43 train loss: 0.408 train acc: 86.102
+epoch: 43 val loss: 0.568 val acc: 80.770
+
+Epoch: 44
+epoch: 44 train loss: 0.410 train acc: 85.972
+epoch: 44 val loss: 0.585 val acc: 80.350
+
+Epoch: 45
+epoch: 45 train loss: 0.406 train acc: 86.156
+epoch: 45 val loss: 0.758 val acc: 76.470
+
+Epoch: 46
+epoch: 46 train loss: 0.405 train acc: 86.146
+epoch: 46 val loss: 0.521 val acc: 82.850
+
+Epoch: 47
+epoch: 47 train loss: 0.404 train acc: 86.144
+epoch: 47 val loss: 0.595 val acc: 80.610
+
+Epoch: 48
+epoch: 48 train loss: 0.398 train acc: 86.482
+epoch: 48 val loss: 0.617 val acc: 80.130
+
+Epoch: 49
+epoch: 49 train loss: 0.404 train acc: 86.120
+epoch: 49 val loss: 0.529 val acc: 82.100
+
+Epoch: 50
+epoch: 50 train loss: 0.392 train acc: 86.676
+epoch: 50 val loss: 0.509 val acc: 83.690
+
+Epoch: 51
+epoch: 51 train loss: 0.403 train acc: 86.266
+epoch: 51 val loss: 0.675 val acc: 78.680
+
+Epoch: 52
+epoch: 52 train loss: 0.392 train acc: 86.714
+epoch: 52 val loss: 0.524 val acc: 81.960
+
+Epoch: 53
+epoch: 53 train loss: 0.391 train acc: 86.578
+epoch: 53 val loss: 0.726 val acc: 78.200
+
+Epoch: 54
+epoch: 54 train loss: 0.395 train acc: 86.630
+epoch: 54 val loss: 0.675 val acc: 78.310
+
+Epoch: 55
+epoch: 55 train loss: 0.388 train acc: 86.732
+epoch: 55 val loss: 0.540 val acc: 82.110
+
+Epoch: 56
+epoch: 56 train loss: 0.392 train acc: 86.498
+epoch: 56 val loss: 0.725 val acc: 77.140
+
+Epoch: 57
+epoch: 57 train loss: 0.385 train acc: 86.886
+epoch: 57 val loss: 0.685 val acc: 77.500
+
+Epoch: 58
+epoch: 58 train loss: 0.385 train acc: 86.744
+epoch: 58 val loss: 0.458 val acc: 84.440
+Saving..
+
+Epoch: 59
+epoch: 59 train loss: 0.389 train acc: 86.692
+epoch: 59 val loss: 0.669 val acc: 78.740
+
+Epoch: 60
+epoch: 60 train loss: 0.382 train acc: 86.942
+epoch: 60 val loss: 0.761 val acc: 77.290
+
+Epoch: 61
+epoch: 61 train loss: nan train acc: 66.834
+epoch: 61 val loss: nan val acc: 10.000
+
+Epoch: 62
+epoch: 62 train loss: nan train acc: 10.000
+epoch: 62 val loss: nan val acc: 10.000
+
+Epoch: 63
+epoch: 63 train loss: nan train acc: 10.000
+epoch: 63 val loss: nan val acc: 10.000
+
+Epoch: 64
+epoch: 64 train loss: nan train acc: 10.000
+epoch: 64 val loss: nan val acc: 10.000
+
+Epoch: 65
+epoch: 65 train loss: nan train acc: 10.000
+epoch: 65 val loss: nan val acc: 10.000
+
+Epoch: 66
+epoch: 66 train loss: nan train acc: 10.000
+epoch: 66 val loss: nan val acc: 10.000
+
+Epoch: 67
+epoch: 67 train loss: nan train acc: 10.000
+epoch: 67 val loss: nan val acc: 10.000
+
+Epoch: 68
+epoch: 68 train loss: nan train acc: 10.000
+epoch: 68 val loss: nan val acc: 10.000
+
+Epoch: 69
+epoch: 69 train loss: nan train acc: 10.000
+epoch: 69 val loss: nan val acc: 10.000
+
+Epoch: 70
+epoch: 70 train loss: nan train acc: 10.000
+epoch: 70 val loss: nan val acc: 10.000
+
+Epoch: 71
+epoch: 71 train loss: nan train acc: 10.000
+epoch: 71 val loss: nan val acc: 10.000
+
+Epoch: 72
+epoch: 72 train loss: nan train acc: 10.000
+epoch: 72 val loss: nan val acc: 10.000
+
+Epoch: 73
+epoch: 73 train loss: nan train acc: 10.000
+epoch: 73 val loss: nan val acc: 10.000
+
+Epoch: 74
+epoch: 74 train loss: nan train acc: 10.000
+epoch: 74 val loss: nan val acc: 10.000
+
+Epoch: 75
+epoch: 75 train loss: nan train acc: 10.000
+epoch: 75 val loss: nan val acc: 10.000
+
+Epoch: 76
+epoch: 76 train loss: nan train acc: 10.000
+epoch: 76 val loss: nan val acc: 10.000
+
+Epoch: 77
+epoch: 77 train loss: nan train acc: 10.000
+epoch: 77 val loss: nan val acc: 10.000
+
+Epoch: 78
+epoch: 78 train loss: nan train acc: 10.000
+epoch: 78 val loss: nan val acc: 10.000
+
+Epoch: 79
+epoch: 79 train loss: nan train acc: 10.000
+epoch: 79 val loss: nan val acc: 10.000
+
+Epoch: 80
+epoch: 80 train loss: nan train acc: 10.000
+epoch: 80 val loss: nan val acc: 10.000
+
+Epoch: 81
+epoch: 81 train loss: nan train acc: 10.000
+epoch: 81 val loss: nan val acc: 10.000
+
+Epoch: 82
+epoch: 82 train loss: nan train acc: 10.000
+epoch: 82 val loss: nan val acc: 10.000
+
+Epoch: 83
+epoch: 83 train loss: nan train acc: 10.000
+epoch: 83 val loss: nan val acc: 10.000
+
+Epoch: 84
+epoch: 84 train loss: nan train acc: 10.000
+epoch: 84 val loss: nan val acc: 10.000
+
+Epoch: 85
+epoch: 85 train loss: nan train acc: 10.000
+epoch: 85 val loss: nan val acc: 10.000
+
+Epoch: 86
+epoch: 86 train loss: nan train acc: 10.000
+epoch: 86 val loss: nan val acc: 10.000
+
+Epoch: 87
+epoch: 87 train loss: nan train acc: 10.000
+epoch: 87 val loss: nan val acc: 10.000
+
+Epoch: 88
+epoch: 88 train loss: nan train acc: 10.000
+epoch: 88 val loss: nan val acc: 10.000
+
+Epoch: 89
+epoch: 89 train loss: nan train acc: 10.000
+epoch: 89 val loss: nan val acc: 10.000
+
+Epoch: 90
+epoch: 90 train loss: nan train acc: 10.000
+epoch: 90 val loss: nan val acc: 10.000
+
+Epoch: 91
+epoch: 91 train loss: nan train acc: 10.000
+epoch: 91 val loss: nan val acc: 10.000
+
+Epoch: 92
+epoch: 92 train loss: nan train acc: 10.000
+epoch: 92 val loss: nan val acc: 10.000
+
+Epoch: 93
+epoch: 93 train loss: nan train acc: 10.000
+epoch: 93 val loss: nan val acc: 10.000
+
+Epoch: 94
+epoch: 94 train loss: nan train acc: 10.000
+epoch: 94 val loss: nan val acc: 10.000
+
+Epoch: 95
+epoch: 95 train loss: nan train acc: 10.000
+epoch: 95 val loss: nan val acc: 10.000
+
+Epoch: 96
+epoch: 96 train loss: nan train acc: 10.000
+epoch: 96 val loss: nan val acc: 10.000
+
+Epoch: 97
+epoch: 97 train loss: nan train acc: 10.000
+epoch: 97 val loss: nan val acc: 10.000
+
+Epoch: 98
+epoch: 98 train loss: nan train acc: 10.000
+epoch: 98 val loss: nan val acc: 10.000
+
+Epoch: 99
+epoch: 99 train loss: nan train acc: 10.000
+epoch: 99 val loss: nan val acc: 10.000
+
+Epoch: 100
+epoch: 100 train loss: nan train acc: 10.000
+epoch: 100 val loss: nan val acc: 10.000
+
+Epoch: 101
+epoch: 101 train loss: nan train acc: 10.000
+epoch: 101 val loss: nan val acc: 10.000
+
+Epoch: 102
+epoch: 102 train loss: nan train acc: 10.000
+epoch: 102 val loss: nan val acc: 10.000
+
+Epoch: 103
+epoch: 103 train loss: nan train acc: 10.000
+epoch: 103 val loss: nan val acc: 10.000
+
+Epoch: 104
+epoch: 104 train loss: nan train acc: 10.000
+epoch: 104 val loss: nan val acc: 10.000
+
+Epoch: 105
+epoch: 105 train loss: nan train acc: 10.000
+epoch: 105 val loss: nan val acc: 10.000
+
+Epoch: 106
+epoch: 106 train loss: nan train acc: 10.000
+epoch: 106 val loss: nan val acc: 10.000
+
+Epoch: 107
+epoch: 107 train loss: nan train acc: 10.000
+epoch: 107 val loss: nan val acc: 10.000
+
+Epoch: 108
+epoch: 108 train loss: nan train acc: 10.000
+epoch: 108 val loss: nan val acc: 10.000
+
+Epoch: 109
+epoch: 109 train loss: nan train acc: 10.000
+epoch: 109 val loss: nan val acc: 10.000
+
+Epoch: 110
+epoch: 110 train loss: nan train acc: 10.000
+epoch: 110 val loss: nan val acc: 10.000
+
+Epoch: 111
+epoch: 111 train loss: nan train acc: 10.000
+epoch: 111 val loss: nan val acc: 10.000
+
+Epoch: 112
+epoch: 112 train loss: nan train acc: 10.000
+epoch: 112 val loss: nan val acc: 10.000
+
+Epoch: 113
+epoch: 113 train loss: nan train acc: 10.000
+epoch: 113 val loss: nan val acc: 10.000
+
+Epoch: 114
+epoch: 114 train loss: nan train acc: 10.000
+epoch: 114 val loss: nan val acc: 10.000
+
+Epoch: 115
+epoch: 115 train loss: nan train acc: 10.000
+epoch: 115 val loss: nan val acc: 10.000
+
+Epoch: 116
+epoch: 116 train loss: nan train acc: 10.000
+epoch: 116 val loss: nan val acc: 10.000
+
+Epoch: 117
+epoch: 117 train loss: nan train acc: 10.000
+epoch: 117 val loss: nan val acc: 10.000
+
+Epoch: 118
+epoch: 118 train loss: nan train acc: 10.000
+epoch: 118 val loss: nan val acc: 10.000
+
+Epoch: 119
+epoch: 119 train loss: nan train acc: 10.000
+epoch: 119 val loss: nan val acc: 10.000
+
+Epoch: 120
+epoch: 120 train loss: nan train acc: 10.000
+epoch: 120 val loss: nan val acc: 10.000
+
+Epoch: 121
+epoch: 121 train loss: nan train acc: 10.000
+epoch: 121 val loss: nan val acc: 10.000
+
+Epoch: 122
+epoch: 122 train loss: nan train acc: 10.000
+epoch: 122 val loss: nan val acc: 10.000
+
+Epoch: 123
+epoch: 123 train loss: nan train acc: 10.000
+epoch: 123 val loss: nan val acc: 10.000
+
+Epoch: 124
+epoch: 124 train loss: nan train acc: 10.000
+epoch: 124 val loss: nan val acc: 10.000
+
+Epoch: 125
+epoch: 125 train loss: nan train acc: 10.000
+epoch: 125 val loss: nan val acc: 10.000
+
+Epoch: 126
+epoch: 126 train loss: nan train acc: 10.000
+epoch: 126 val loss: nan val acc: 10.000
+
+Epoch: 127
+epoch: 127 train loss: nan train acc: 10.000
+epoch: 127 val loss: nan val acc: 10.000
+
+Epoch: 128
+epoch: 128 train loss: nan train acc: 10.000
+epoch: 128 val loss: nan val acc: 10.000
+
+Epoch: 129
+epoch: 129 train loss: nan train acc: 10.000
+epoch: 129 val loss: nan val acc: 10.000
+
+Epoch: 130
+epoch: 130 train loss: nan train acc: 10.000
+epoch: 130 val loss: nan val acc: 10.000
+
+Epoch: 131
+epoch: 131 train loss: nan train acc: 10.000
+epoch: 131 val loss: nan val acc: 10.000
+
+Epoch: 132
+epoch: 132 train loss: nan train acc: 10.000
+epoch: 132 val loss: nan val acc: 10.000
+
+Epoch: 133
+epoch: 133 train loss: nan train acc: 10.000
+epoch: 133 val loss: nan val acc: 10.000
+
+Epoch: 134
+epoch: 134 train loss: nan train acc: 10.000
+epoch: 134 val loss: nan val acc: 10.000
+
+Epoch: 135
+epoch: 135 train loss: nan train acc: 10.000
+epoch: 135 val loss: nan val acc: 10.000
+
+Epoch: 136
+epoch: 136 train loss: nan train acc: 10.000
+epoch: 136 val loss: nan val acc: 10.000
+
+Epoch: 137
+epoch: 137 train loss: nan train acc: 10.000
+epoch: 137 val loss: nan val acc: 10.000
+
+Epoch: 138
+epoch: 138 train loss: nan train acc: 10.000
+epoch: 138 val loss: nan val acc: 10.000
+
+Epoch: 139
+epoch: 139 train loss: nan train acc: 10.000
+epoch: 139 val loss: nan val acc: 10.000
+
+Epoch: 140
+epoch: 140 train loss: nan train acc: 10.000
+epoch: 140 val loss: nan val acc: 10.000
+
+Epoch: 141
+epoch: 141 train loss: nan train acc: 10.000
+epoch: 141 val loss: nan val acc: 10.000
+
+Epoch: 142
+epoch: 142 train loss: nan train acc: 10.000
+epoch: 142 val loss: nan val acc: 10.000
+
+Epoch: 143
+epoch: 143 train loss: nan train acc: 10.000
+epoch: 143 val loss: nan val acc: 10.000
+
+Epoch: 144
+epoch: 144 train loss: nan train acc: 10.000
+epoch: 144 val loss: nan val acc: 10.000
+
+Epoch: 145
+epoch: 145 train loss: nan train acc: 10.000
+epoch: 145 val loss: nan val acc: 10.000
+
+Epoch: 146
+epoch: 146 train loss: nan train acc: 10.000
+epoch: 146 val loss: nan val acc: 10.000
+
+Epoch: 147
+epoch: 147 train loss: nan train acc: 10.000
+epoch: 147 val loss: nan val acc: 10.000
+
+Epoch: 148
+epoch: 148 train loss: nan train acc: 10.000
+epoch: 148 val loss: nan val acc: 10.000
+
+Epoch: 149
+epoch: 149 train loss: nan train acc: 10.000
+epoch: 149 val loss: nan val acc: 10.000
+
+Epoch: 150
+epoch: 150 train loss: nan train acc: 10.000
+epoch: 150 val loss: nan val acc: 10.000
+
+Epoch: 151
+epoch: 151 train loss: nan train acc: 10.000
+epoch: 151 val loss: nan val acc: 10.000
+
+Epoch: 152
+epoch: 152 train loss: nan train acc: 10.000
+epoch: 152 val loss: nan val acc: 10.000
+
+Epoch: 153
+epoch: 153 train loss: nan train acc: 10.000
+epoch: 153 val loss: nan val acc: 10.000
+
+Epoch: 154
+epoch: 154 train loss: nan train acc: 10.000
+epoch: 154 val loss: nan val acc: 10.000
+
+Epoch: 155
+epoch: 155 train loss: nan train acc: 10.000
+epoch: 155 val loss: nan val acc: 10.000
+
+Epoch: 156
+epoch: 156 train loss: nan train acc: 10.000
+epoch: 156 val loss: nan val acc: 10.000
+
+Epoch: 157
+epoch: 157 train loss: nan train acc: 10.000
+epoch: 157 val loss: nan val acc: 10.000
+
+Epoch: 158
+epoch: 158 train loss: nan train acc: 10.000
+epoch: 158 val loss: nan val acc: 10.000
+
+Epoch: 159
+epoch: 159 train loss: nan train acc: 10.000
+epoch: 159 val loss: nan val acc: 10.000
+
+Epoch: 160
+epoch: 160 train loss: nan train acc: 10.000
+epoch: 160 val loss: nan val acc: 10.000
+
+Epoch: 161
+epoch: 161 train loss: nan train acc: 10.000
+epoch: 161 val loss: nan val acc: 10.000
+
+Epoch: 162
+epoch: 162 train loss: nan train acc: 10.000
+epoch: 162 val loss: nan val acc: 10.000
+
+Epoch: 163
+epoch: 163 train loss: nan train acc: 10.000
+epoch: 163 val loss: nan val acc: 10.000
+
+Epoch: 164
+epoch: 164 train loss: nan train acc: 10.000
+epoch: 164 val loss: nan val acc: 10.000
+
+Epoch: 165
+epoch: 165 train loss: nan train acc: 10.000
+epoch: 165 val loss: nan val acc: 10.000
+
+Epoch: 166
+epoch: 166 train loss: nan train acc: 10.000
+epoch: 166 val loss: nan val acc: 10.000
+
+Epoch: 167
+epoch: 167 train loss: nan train acc: 10.000
+epoch: 167 val loss: nan val acc: 10.000
+
+Epoch: 168
+epoch: 168 train loss: nan train acc: 10.000
+epoch: 168 val loss: nan val acc: 10.000
+
+Epoch: 169
+epoch: 169 train loss: nan train acc: 10.000
+epoch: 169 val loss: nan val acc: 10.000
+
+Epoch: 170
+epoch: 170 train loss: nan train acc: 10.000
+epoch: 170 val loss: nan val acc: 10.000
+
+Epoch: 171
+epoch: 171 train loss: nan train acc: 10.000
+epoch: 171 val loss: nan val acc: 10.000
+
+Epoch: 172
+epoch: 172 train loss: nan train acc: 10.000
+epoch: 172 val loss: nan val acc: 10.000
+
+Epoch: 173
+epoch: 173 train loss: nan train acc: 10.000
+epoch: 173 val loss: nan val acc: 10.000
+
+Epoch: 174
+epoch: 174 train loss: nan train acc: 10.000
+epoch: 174 val loss: nan val acc: 10.000
+
+Epoch: 175
+epoch: 175 train loss: nan train acc: 10.000
+epoch: 175 val loss: nan val acc: 10.000
+
+Epoch: 176
+epoch: 176 train loss: nan train acc: 10.000
+epoch: 176 val loss: nan val acc: 10.000
+
+Epoch: 177
+epoch: 177 train loss: nan train acc: 10.000
+epoch: 177 val loss: nan val acc: 10.000
+
+Epoch: 178
+epoch: 178 train loss: nan train acc: 10.000
+epoch: 178 val loss: nan val acc: 10.000
+
+Epoch: 179
+epoch: 179 train loss: nan train acc: 10.000
+epoch: 179 val loss: nan val acc: 10.000
+
+Epoch: 180
+epoch: 180 train loss: nan train acc: 10.000
+epoch: 180 val loss: nan val acc: 10.000
+
+Epoch: 181
+epoch: 181 train loss: nan train acc: 10.000
+epoch: 181 val loss: nan val acc: 10.000
+
+Epoch: 182
+epoch: 182 train loss: nan train acc: 10.000
+epoch: 182 val loss: nan val acc: 10.000
+
+Epoch: 183
+epoch: 183 train loss: nan train acc: 10.000
+epoch: 183 val loss: nan val acc: 10.000
+
+Epoch: 184
+epoch: 184 train loss: nan train acc: 10.000
+epoch: 184 val loss: nan val acc: 10.000
+
+Epoch: 185
+epoch: 185 train loss: nan train acc: 10.000
+epoch: 185 val loss: nan val acc: 10.000
+
+Epoch: 186
+epoch: 186 train loss: nan train acc: 10.000
+epoch: 186 val loss: nan val acc: 10.000
+
+Epoch: 187
+epoch: 187 train loss: nan train acc: 10.000
+epoch: 187 val loss: nan val acc: 10.000
+
+Epoch: 188
+epoch: 188 train loss: nan train acc: 10.000
+epoch: 188 val loss: nan val acc: 10.000
+
+Epoch: 189
+epoch: 189 train loss: nan train acc: 10.000
+epoch: 189 val loss: nan val acc: 10.000
+
+Epoch: 190
+epoch: 190 train loss: nan train acc: 10.000
+epoch: 190 val loss: nan val acc: 10.000
+
+Epoch: 191
+epoch: 191 train loss: nan train acc: 10.000
+epoch: 191 val loss: nan val acc: 10.000
+
+Epoch: 192
+epoch: 192 train loss: nan train acc: 10.000
+epoch: 192 val loss: nan val acc: 10.000
+
+Epoch: 193
+epoch: 193 train loss: nan train acc: 10.000
+epoch: 193 val loss: nan val acc: 10.000
+
+Epoch: 194
+epoch: 194 train loss: nan train acc: 10.000
+epoch: 194 val loss: nan val acc: 10.000
+
+Epoch: 195
+epoch: 195 train loss: nan train acc: 10.000
+epoch: 195 val loss: nan val acc: 10.000
+
+Epoch: 196
+epoch: 196 train loss: nan train acc: 10.000
+epoch: 196 val loss: nan val acc: 10.000
+
+Epoch: 197
+epoch: 197 train loss: nan train acc: 10.000
+epoch: 197 val loss: nan val acc: 10.000
+
+Epoch: 198
+epoch: 198 train loss: nan train acc: 10.000
+epoch: 198 val loss: nan val acc: 10.000
+
+Epoch: 199
+epoch: 199 train loss: nan train acc: 10.000
+epoch: 199 val loss: nan val acc: 10.000

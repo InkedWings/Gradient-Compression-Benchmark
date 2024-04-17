@@ -15,10 +15,10 @@ import os
 import argparse
 
 from models import *
-from optim_comp import CompSGD
+# from optim_comp import CompSGD
 from memory.memory_chooser import memory_chooser
 from compression.compression_chooser import compression_chooser
-# from utils import progress_bar
+from utils import progress_bar
 
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
@@ -79,7 +79,7 @@ testloader = torch.utils.data.DataLoader(
     testset, batch_size=100, shuffle=False, num_workers=2)
 
 classes = ('plane', 'car', 'bird', 'cat', 'deer',
-           'dog', 'frog', 'horse', 'ship', 'truck')
+            'dog', 'frog', 'horse', 'ship', 'truck')
 
 # Model
 print('==> Building model..')
@@ -108,8 +108,8 @@ print("Using memory: ", str(memory))
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr,
-                      momentum=0.9, weight_decay=5e-4)
-optimizer = CompSGD(optimizer, net.named_parameters(),args.num_workers, compressor, memory)
+                        momentum=0.9, weight_decay=5e-4)
+# optimizer = CompSGD(optimizer, net.named_parameters(),args.num_workers, compressor, memory)
 scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=200)
 
 
@@ -124,25 +124,48 @@ def train(epoch):
     global acc_data
     for batch_idx, (inputs, targets) in enumerate(trainloader):
         inputs, targets = inputs.to(device), targets.to(device)
-        worker_num = (batch_idx+1) % args.num_workers   
         optimizer.zero_grad()
         outputs = net(inputs)
         loss = criterion(outputs, targets)
         loss.backward()
-
-        optimizer.compress_step(worker_num)
-        if worker_num == 0:
-            optimizer.assign_grads()
-            torch.nn.utils.clip_grad_norm_(net.parameters(), 0.25)
-            optimizer.step()
+        if args.compression != 'none':
+            # Without Error Feedback
+            if args.memory == 'none':
+                for name, p in net.named_parameters():
+                    full_grad = p.grad
+                    comp_grad, ctx = compressor.compress(full_grad, name)
+                    """Decompress by filling empty slots with zeros and reshape back using the original shape"""
+                    decomp_grad = compressor.decompress(comp_grad, ctx)
+                    p.grad = decomp_grad
+            # With Error Feedback
+            elif args.memory == 'residual':
+                worker = 0  # worker index for simple experiment, temporarily set it as 0
+                for name, p in net.named_parameters():
+                    full_grad = p.grad
+                    ef_grad = memory.compensate(full_grad, name, worker)  # Error Feedback
+                    comp_grad, ctx = compressor.compress(ef_grad, name)
+                    memory.update(ef_grad, name, worker, compressor, comp_grad, ctx)
+                    """Decompress by filling empty slots with zeros and reshape back using the original shape"""
+                    decomp_grad = compressor.decompress(comp_grad, ctx)
+                    p.grad = decomp_grad
+            elif args.memory == 'diana':
+                worker = 0
+                for name, p in net.named_parameters():
+                    full_grad = p.grad
+                    memory.update(full_grad, name, worker, compressor)
+                    # comp_grad, ctx = compressor.compress(full_grad, name)
+                    # decomp_grad = compressor.decompress(comp_grad, ctx)
+                    diana_grad =  memory.getproto(name, worker)
+                    p.grad = diana_grad
+        optimizer.step()
 
         train_loss += loss.item()
         _, predicted = outputs.max(1)
         total += targets.size(0)
         correct += predicted.eq(targets).sum().item()
 
-        # progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-        #              % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
+        progress_bar(batch_idx, len(trainloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+                     % (train_loss/(batch_idx+1), 100.*correct/total, correct, total))
     print("epoch: %d train loss: %.3f train acc: %.3f" % (epoch, train_loss/len(trainloader), 100.*correct/total))
     loss_data['train'].append(train_loss/len(trainloader))
     acc_data['train'].append(100.*correct/total)
@@ -167,11 +190,11 @@ def test(epoch):
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
 
-            # progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
-            #              % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
+            progress_bar(batch_idx, len(testloader), 'Loss: %.3f | Acc: %.3f%% (%d/%d)'
+                         % (test_loss/(batch_idx+1), 100.*correct/total, correct, total))
     print("epoch: %d val loss: %.3f val acc: %.3f" % (epoch, test_loss/len(testloader), 100.*correct/total))
     loss_data['val'].append(test_loss/len(testloader))
-    acc_data['val'].append(100.*correct/total)       
+    acc_data['val'].append(100.*correct/total)
 
     # Save checkpoint.
     acc = 100.*correct/total
@@ -210,25 +233,21 @@ def fig_plot(x_epoch, loss_data, acc_data):
 # Record Data in CSV file
 def record_csv(x_epoch, loss_data, acc_data):
     data_dict = {'epoch': x_epoch, 'train_loss': loss_data['train'],
-                 'val_loss': loss_data['val'], 'train_acc': acc_data['train'],
-                 'val_acc': acc_data['val']}
-    
+                    'val_loss': loss_data['val'], 'train_acc': acc_data['train'],
+                    'val_acc': acc_data['val']}
+
     df = pd.DataFrame(data_dict)
     write_mode = 'w'
     if args.resume:
         write_mode = 'a'
-    
+
     df.to_csv(wdir+"out_data/{model_name}.csv".format(model_name=args.model_name), mode = write_mode, index=False)
-
-    
-
-
 
 
 if args.test:
     test(start_epoch)
 else:
-    for epoch in range(start_epoch, start_epoch+150):
+    for epoch in range(start_epoch, start_epoch+200):
 
         train(epoch)
         test(epoch)

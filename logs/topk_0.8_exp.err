@@ -1,0 +1,51 @@
+
+Lmod is automatically replacing "nvhpc/22.11" with "gcc/12.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.25
+
+  0%|          | 0/170498071 [00:00<?, ?it/s]  1%|          | 884736/170498071 [00:00<00:21, 7714996.81it/s]  6%|▌         | 9994240/170498071 [00:00<00:02, 53915688.66it/s] 13%|█▎        | 21725184/170498071 [00:00<00:01, 81879826.49it/s] 19%|█▉        | 33062912/170498071 [00:00<00:01, 93924705.72it/s] 26%|██▌       | 44662784/170498071 [00:00<00:01, 101770768.45it/s] 33%|███▎      | 55902208/170498071 [00:00<00:01, 105302007.90it/s] 40%|███▉      | 67403776/170498071 [00:00<00:00, 108370356.79it/s] 46%|████▌     | 78479360/170498071 [00:00<00:00, 109023415.71it/s] 52%|█████▏    | 89423872/170498071 [00:00<00:00, 108319909.12it/s] 59%|█████▉    | 100663296/170498071 [00:01<00:00, 109480107.28it/s] 66%|██████▌   | 112099328/170498071 [00:01<00:00, 110935828.60it/s] 72%|███████▏  | 123568128/170498071 [00:01<00:00, 112017898.59it/s] 79%|███████▉  | 134840320/170498071 [00:01<00:00, 112209866.92it/s] 86%|████████▌ | 146407424/170498071 [00:01<00:00, 113209485.45it/s] 93%|█████████▎| 157745152/170498071 [00:01<00:00, 113070558.91it/s] 99%|█████████▉| 169279488/170498071 [00:01<00:00, 113708076.97it/s]100%|██████████| 170498071/170498071 [00:01<00:00, 104513480.72it/s]
+Traceback (most recent call last):
+  File "/home/zye25/Gradient-Compression-Benchmark/main.py", line 238, in <module>
+    fig_plot(x_epoch, loss_data, acc_data)
+  File "/home/zye25/Gradient-Compression-Benchmark/main.py", line 199, in fig_plot
+    fig_loss.savefig(wdir+"out_fig/loss/{model_name}.jpg".format(model_name=args.model_name))
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/figure.py", line 3390, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2187, in print_figure
+    result = print_method(
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/backend_bases.py", line 2043, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py", line 514, in print_jpg
+    self._print_pil(filename_or_obj, "jpeg", pil_kwargs, metadata)
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/backends/backend_agg.py", line 446, in _print_pil
+    mpl.image.imsave(
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/matplotlib/image.py", line 1656, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/soft/datascience/conda/2023-10-04/mconda3/lib/python3.10/site-packages/PIL/Image.py", line 2410, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/zye25/Gradient-Compression-Benchmark/out_fig/loss/topk_0.8_with_ef.jpg'
+
+Lmod is automatically replacing "nvhpc/22.11" with "gcc/12.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.25
+
+
+Lmod is automatically replacing "nvhpc/22.11" with "gcc/12.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.25
+
