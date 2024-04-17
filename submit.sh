@@ -14,7 +14,7 @@ WDIR="/home/zye25/Gradient-Compression-Benchmark/"
 
 CMD="cd $WDIR ; "
 
-CMD+="python main.py --model_name self_topk_0.1_ef --compression topk --compression_ratio 0.1 --memory residual"
+CMD+="python main.py --model_name topk_0.01_diana --compression topk --compression_ratio 0.01 --memory diana"
 
 
 FULL_CMD="$PRELOAD $CMD $@ "
